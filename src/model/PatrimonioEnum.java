@@ -18,4 +18,12 @@ public enum PatrimonioEnum {
         return valor;
     }
 
+    public static PatrimonioEnum porNumero(int numero) {
+        for (PatrimonioEnum patrimonio : PatrimonioEnum.values()) {
+            if (numero == patrimonio.getValor())
+                return patrimonio;
+        }
+        throw new IllegalArgumentException("Valor inválido");
+    }
+
 }

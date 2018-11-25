@@ -17,12 +17,12 @@ public class TelaPrincipal {
     }
 
     public void iniciaTela(){
-        System.out.println("*** BEM VINDO AO SISTEMA DE LISTA INVERTIDA ***\n");
+        System.out.println("*** BEM VINDO AO SISTEMA DE LISTA INVERTIDA ***");
     }
 
     public int telaInicial(){
         Scanner sc = new Scanner(System.in);
-        System.out.println("SELECIONE UMA DAS OPÇÕES ABAIXO\n");
+        System.out.println("\nSELECIONE UMA DAS OPÇÕES ABAIXO\n");
         System.out.println("1. Cadastrar político");
         System.out.println("2. Remover político");
         System.out.println("3. Fazer uma busca simples");
@@ -45,4 +45,5 @@ public class TelaPrincipal {
     public void encerrandoPrograma() {
         System.out.println("\nEncerrando programa...");
     }
+
 }

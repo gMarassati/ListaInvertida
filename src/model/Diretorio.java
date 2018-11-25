@@ -5,12 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Diretorio {
-
-    private String nomeLinha;
     private Map<Enum, ArrayList<String>> linhas = new HashMap<>();
 
-    public Diretorio(String nomeLinha, Enum[] listaValores) {
-        this.nomeLinha = nomeLinha;
+    public Diretorio(Enum[] listaValores) {
         criarIndices(listaValores);
     }
 
@@ -20,15 +17,8 @@ public class Diretorio {
         }
     }
 
-    public String getNomeLinha() {
-        return nomeLinha;
-    }
-
-    public void setNomeLinha(String nomeLinha) {
-        this.nomeLinha = nomeLinha;
-    }
-
     public Map<Enum, ArrayList<String>> getLinhas() {
         return linhas;
     }
+
 }

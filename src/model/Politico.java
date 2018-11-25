@@ -20,40 +20,20 @@ public class Politico {
         return cpf;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
     public String getNome() {
         return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
     }
 
     public Enum getPartido() {
         return partido;
     }
 
-    public void setPartido(Enum partido) {
-        this.partido = partido;
-    }
-
     public Enum getCargo() {
         return cargo;
     }
 
-    public void setCargo(Enum cargo) {
-        this.cargo = cargo;
-    }
-
     public int getPatrimonio() {
         return patrimonio;
-    }
-
-    public void setPatrimonio(int patrimonio) {
-        this.patrimonio = patrimonio;
     }
 
 }

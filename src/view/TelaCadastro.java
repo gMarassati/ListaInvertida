@@ -18,14 +18,14 @@ public class TelaCadastro {
 
     public String inputCpf(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Digite o CPF: ");
+        System.out.print("\nDigite o CPF: ");
         return sc.next();
     }
 
     public String inputNome(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite o Nome: ");
-        return sc.next();
+        return sc.nextLine();
     }
 
     public int inputPartido(){
@@ -54,12 +54,12 @@ public class TelaCadastro {
 
     public String removerPolitico(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Digite o CPF do politico a ser removido: ");
+        System.out.print("\nDigite o CPF do politico a ser removido: ");
         return sc.next();
     }
 
-    public void politicoCadastrado(){
-        System.out.println("Político cadastrado com sucesso");
+    public void politicoAddOuRem(String acao){
+        System.out.println("\nPolítico " + acao + " com sucesso");
     }
 
 }
