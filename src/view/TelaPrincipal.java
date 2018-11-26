@@ -1,5 +1,6 @@
 package view;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TelaPrincipal {
@@ -20,7 +21,7 @@ public class TelaPrincipal {
         System.out.println("*** BEM VINDO AO SISTEMA DE LISTA INVERTIDA ***");
     }
 
-    public int telaInicial(){
+    public int telaInicial() {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nSELECIONE UMA DAS OPÇÕES ABAIXO\n");
         System.out.println("1. Cadastrar político");
@@ -30,20 +31,21 @@ public class TelaPrincipal {
         System.out.println("5. Exibir políticos cadastrados");
         System.out.println("0. Sair");
         System.out.print("\nOpção escolhida: ");
-        return sc.nextInt();
+        return verificaInput(sc.nextLine());
     }
-
-    public void emConstrucao(){
-        System.out.println("\nEm construção\n");
-    }
-
-    public void opcaoInvalida(){
-        System.out.println("\nOpção inválida. Verifique número digitado.\n");
-    }
-
 
     public void encerrandoPrograma() {
         System.out.println("\nEncerrando programa...");
+    }
+
+    // se o input não for um inteiro válido (sem espaços), retorna exceção (tratada em outras funções)
+    private int verificaInput(String input){
+        try{
+            int numero = Integer.parseInt(input);
+            return numero;
+        } catch(NumberFormatException e){
+            throw new InputMismatchException("Deve digitar apenas números (sem espaços ou letras)");
+        }
     }
 
 }
